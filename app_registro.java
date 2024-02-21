@@ -4,13 +4,25 @@ import javax.swing.JOptionPane;
 
 public class app_registro {
     static LinkedList<cls_productos> productos = new LinkedList<cls_productos>();
+    static boolean sw = false;
+    static int posicion = 0;
+
     public static void main(String[]args){
         fnt_menu(true);
     }
 
+    private static void fnt_actualizar(int codigo_int){
+        fnt_consultar(codigo_int);
+        if (sw) {
+            JOptionPane.showMessageDialog(null, "Nombre: " + productos.get(posicion).getNombre_str() + "\n" + "Existencias: " + productos.get(posicion).getExistencias_int() + "\n" + "Precio de venta: " + productos.get(posicion).getPrecio_venta_flt() + "\n" + "Ganancia: " + productos.get(posicion).getGanancia_flt(), "CONSULTAR",JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(null,"Producto no encontrado.","CONSULTAR",JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
     private static void fnt_consultar(int codigo_int){
-        boolean sw = false;
-        int posicion = 0;
+        sw = false;
+        posicion = 0;
         for(int i = 0; i < productos.size(); i++){
             if (productos.get(i).getCodigo_int() == codigo_int) {
                 posicion = i;
