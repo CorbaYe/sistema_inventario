@@ -25,7 +25,7 @@ public class app_registro {
                     Float ganancia_flt = Float.valueOf(JOptionPane.showInputDialog(null, "Ganancia")); 
                     productos.get(posicion).setGanancia_flt(ganancia_flt);
                 }
-                if (menu.equals("3") || !menu.equals("1") || !menu.equals("2") || !menu.equals("3") ) {
+                if (menu.equals("3")) {
                     menu_actualizar = false;
                 }
             } while (menu_actualizar);
