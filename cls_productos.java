@@ -21,24 +21,28 @@ public class cls_productos {
     public void setCodigo_int(int codigo_int) {
         this.codigo_int = codigo_int;
     }
+
     public String getNombre_str() {
         return nombre_str;
     }
     public void setNombre_str(String nombre_str) {
         this.nombre_str = nombre_str;
     }
+
     public int getExistencias_int() {
         return existencias_int;
     }
     public void setExistencias_int(int existencias_int) {
         this.existencias_int = existencias_int;
     }
+
     public float getPrecio_venta_flt() {
         return precio_venta_flt;
     }
     public void setPrecio_venta_flt(float precio_venta_flt) {
         this.precio_venta_flt = precio_venta_flt;
     }
+    
     public float getGanancia_flt() {
         return ganancia_flt;
     }
